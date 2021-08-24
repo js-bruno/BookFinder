@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
-    <title>Book Finder Bruno</title>
+    <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
+    <title>Book Finder</title>
 </head>
 <body>
     <main>
         <form class="form-search" action="/" method="GET">
             <input type="text" name="book_search" id="bookinput">
             <div>
-                <input type="submit" value="SEARCH"> 
+                <input type="image" src="./img/outline_search_white_24dp.png" alt="Submit" height="50px">
             </div>
         </form>
         <% if (!hide) { %> 
@@ -29,6 +30,10 @@
                             <p><strong>Author</strong>: <%= result.volumeInfo.authors %></p>
                             <p><strong>Publisher:</strong> <%= result.volumeInfo.publisher %></p>
                             <p><strong>PublishedDate:</strong> <%= result.volumeInfo.publishedDate %></p>
+                            <div class="button_infos">
+                                <a href="<%= result.volumeInfo.infoLink %> " target="_blank"><div><input class="button-read-more" type="button" value="Read More"></div></a>
+                                <a href="<%= result.volumeInfo.previewLink %> " target="_blank"><div><input class="button-read-more" type="button" value="Preview"></div></a>
+                            </div>
                         </div>
                         <!-- <img src="" alt="book_image" > -->
                     </div>

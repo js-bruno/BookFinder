@@ -2,6 +2,9 @@
     margin:0px;
     padding:0px;
 }
+a {
+    text-decoration: none;
+}
 body {
     background: #870000;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #190A05, #870000);  /* Chrome 10-25, Safari 5.1-6 */
@@ -25,6 +28,8 @@ body {
     margin-right: 10px;
     height: 55px;
     width: 20rem;
+    padding-left: 15px;
+    font-size: large;
     border: 4px double black;
     box-shadow:  2px 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
@@ -36,19 +41,17 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 5.5rem;
     color: black;
 }
 .books-flex > div {
     display: flex;
     flex-wrap: wrap;
-    background: #DE6262;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFB88C, #DE6262);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #DE6262;
+    background: linear-gradient(to right, #FFB88C, #DE6262); 
 
     border: 1px solid black;
-    width: 35rem;
-    height: 16rem;
+    width: 40rem;
+    height: auto;
     margin: 10px;
 }
 .title{
@@ -65,6 +68,32 @@ body {
     flex-direction: column;
     margin: 10px;
 }
+.button_infos {
+    display: flex;
+}
+.button_infos > a > div {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    margin: 10px;
+}
+.button-read-more {
+    height: 30px;
+    background-color: #17A2B8; /* Green */
+    border: none;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button-read-more:hover {
+    background-color: white; /* Green */
+    color: black;
+  }
+  
+
 img {
     /* 128x192 */
     height: 192px;

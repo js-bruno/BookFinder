@@ -9,11 +9,11 @@ app.use(express.static("public"));
 
 app.get('/', async function (req, res) {
     var book_search = req.query.book_search
-    var hide = false
-    if (book_search == undefined || book_search == '') {
-        hide = true
+    var hide = true
+    if (!book_search == undefined || !book_search == '') {
+        hide = false
+        var replaced = book_search.split(' ').join('+');
     }
-    var replaced = book_search.split(' ').join('+');
     var results = null
     try {
         results = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${replaced}`)
